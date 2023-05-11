@@ -283,6 +283,14 @@ footer .redes i:hover{
         padding-bottom: 20px;
     }
 
+    .agentes{
+        width: 180px;
+    }
+
+    .agentes .oracle{
+        left: 85px;
+    }
+
     .titulo_principal{
         display: inline-block;
         font-size: 60px;
