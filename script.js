@@ -8,8 +8,12 @@ La letra "o" es convertida para "ober"
 La letra "u" es convertida para "ufat" */
 
 function btnEncriptar() {
-    const textoEncriptado = encriptar(textArea.value);
-    mensaje.value = textoEncriptado;
+    if (verificarEspacios(textArea.value) == true){
+        const textoEncriptado = encriptar(textArea.value);
+        mensaje.value = textoEncriptado;
+    } else {
+        mensaje.value = "No se detecto texto valido"
+        }
 }
 
 function encriptar(stringEncriptado) {
@@ -26,8 +30,11 @@ function encriptar(stringEncriptado) {
 }
 
 function btnDesencriptar() {
-    const textoDesencriptado = desencriptar(textArea.value);
-    mensaje.value = textoDesencriptado;
+    if (verificarEspacios(textArea.value)){
+        const textoDesencriptado = desencriptar(textArea.value);
+        mensaje.value = textoDesencriptado;
+    } else {
+        mensaje.value = "No se detecto texto valido"}
 }
 
 function desencriptar(stringDesencriptado) {
@@ -53,10 +60,17 @@ function eliminar() {
     mensaje.value = "";
 }
 
-function validarTexto(texto) {
+function validarMayusCarac(texto) {
     let textoLimpio = texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     
     textoLimpio = textoLimpio.toLowerCase().replace(/[^a-z\s\n]/g, "");
 
     textArea.value = textoLimpio;
+}
+
+function verificarEspacios(texto) {
+    if (texto.trim() === '') {
+        console.log("Espacio detectado")
+        return false;
+    }
 }
