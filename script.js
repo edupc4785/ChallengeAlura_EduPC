@@ -10,7 +10,6 @@ La letra "u" es convertida para "ufat" */
 function btnEncriptar() {
     const textoEncriptado = encriptar(textArea.value);
     mensaje.value = textoEncriptado;
-    console(mensaje)
 }
 
 function encriptar(stringEncriptado) {

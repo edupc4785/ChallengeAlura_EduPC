@@ -25,7 +25,7 @@
         <main>
             <p class="informacion"><i class="bi bi-exclamation-triangle-fill"> No use ni mayusculas ni caracteres especiales</i></p>
             <section class="encriptador">
-                <textarea class="texto_receptor" cols="30" rows="10" placeholder="Texto a encriptar..."></textarea>
+                <textarea id="textRec" class="texto_receptor" cols="30" rows="10" placeholder="Texto a encriptar..."></textarea>
                 <div class="botones_guardarborrar">
                     <button title="Guardar" onclick="copiar()">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-save" viewBox="0 0 16 16" >
@@ -39,7 +39,7 @@
                         </svg>
                     </button>
                 </div>
-                <textarea class="texto_encriptado" cols="30" rows="10" readonly="readonly" ></textarea>
+                <textarea id="textEnc" class="texto_encriptado" cols="30" rows="10" readonly="readonly" placeholder="No se a procesado ningun texto" ></textarea>
             </section>
             <section class="botones_encriptar">
                     <button class="encriptar" onclick="btnEncriptar()"> Encriptar</button>

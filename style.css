@@ -147,6 +147,19 @@ main{
     background-position-y: 20px;
 }
 
+.texto_encriptado::placeholder{
+    color: #929292;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    top: 150px;
+    left: 20px;
+}
+
+.texto_encriptado:not(:placeholder-shown){
+    background-size: 0px;
+}
+
 ::-webkit-scrollbar{
     margin-left: 5px;
     background: none;
@@ -265,7 +278,7 @@ footer .redes i:hover{
 
 @media screen and (max-width: 576px){
     header{
-        height: 200px;
+        height: 240px;
         align-items: flex-end;
         padding-bottom: 20px;
     }
