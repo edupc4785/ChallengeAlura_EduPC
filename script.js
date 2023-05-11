@@ -9,11 +9,11 @@ La letra "u" es convertida para "ufat" */
 
 function btnEncriptar() {
     if (verificarEspacios(textArea.value) == true){
+        mensaje.value = "No se detecto texto valido"
+    } else {
         const textoEncriptado = encriptar(textArea.value);
         mensaje.value = textoEncriptado;
-    } else {
-        mensaje.value = "No se detecto texto valido"
-        }
+    }
 }
 
 function encriptar(stringEncriptado) {
@@ -60,7 +60,7 @@ function eliminar() {
     mensaje.value = "";
 }
 
-function validarMayusCarac(texto) {
+function validarCaracteres(texto) {
     let textoLimpio = texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     
     textoLimpio = textoLimpio.toLowerCase().replace(/[^a-z\s\n]/g, "");
@@ -71,6 +71,6 @@ function validarMayusCarac(texto) {
 function verificarEspacios(texto) {
     if (texto.trim() === '') {
         console.log("Espacio detectado")
-        return false;
+        return true;
     }
 }
