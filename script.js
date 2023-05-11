@@ -52,3 +52,11 @@ function eliminar() {
     textArea.value = "";
     mensaje.value = "";
 }
+
+function validarTexto(texto) {
+    let textoLimpio = texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+    
+    textoLimpio = textoLimpio.toLowerCase().replace(/[^a-z\s\n]/g, "");
+
+    textArea.value = textoLimpio;
+}
