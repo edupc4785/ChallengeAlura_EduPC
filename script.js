@@ -30,11 +30,11 @@ function encriptar(stringEncriptado) {
 }
 
 function btnDesencriptar() {
-    if (verificarEspacios(textArea.value)){
-        const textoDesencriptado = desencriptar(textArea.value);
-        mensaje.value = textoDesencriptado;
+    if (verificarEspacios(textArea.value) == true){
+        mensaje.value = "No se detecto texto valido"
     } else {
-        mensaje.value = "No se detecto texto valido"}
+        const textoDesencriptado = desencriptar(textArea.value);
+        mensaje.value = textoDesencriptado;}
 }
 
 function desencriptar(stringDesencriptado) {
