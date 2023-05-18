@@ -261,10 +261,6 @@ footer .redes i:hover{
         width: 700px;
         text-align: center;
     }
-
-    footer{
-        position: unset;
-    }
 }
 
 @media screen and (min-width: 831px) and (max-width: 969px){
