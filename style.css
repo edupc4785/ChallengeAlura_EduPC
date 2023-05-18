@@ -248,6 +248,49 @@ footer .redes i:hover{
     background-color: #929292;
 }
 
+@media screen and (min-width: 920px) and (max-width: 1200px){
+    header{
+        align-items: center;
+    }
+
+    .titulo_principal{
+        margin-left: 170px;
+        font-size: 80px;
+        width: 700px;
+        text-align: center;
+    }
+    
+}
+
+@media screen and (min-width: 831px) and (max-width: 969px){
+    header{
+        align-items: center;
+        height: 200px;
+    }
+
+    .titulo_principal{
+        margin-left: 50px;
+        font-size: 80px;
+        width: 500px;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 770px) and (max-width: 830px){
+    header{
+        justify-content: flex-end;
+        height: 200px;
+    }
+
+    .titulo_principal{
+        margin-right: 25px;
+        font-size: 80px;
+        width: 500px;
+        text-align: center;
+    }
+    
+}
+
 @media screen and (min-width: 577px) and (max-width: 769px){
     header{
         height: 180px;
@@ -291,10 +334,16 @@ footer .redes i:hover{
         left: 85px;
     }
 
+    .titulo{ 
+        display: flex;
+        justify-content: center;
+    }
+
     .titulo_principal{
         display: inline-block;
         font-size: 60px;
         text-align: center;
+        width: 90%;
     }
 
     .encriptador{
