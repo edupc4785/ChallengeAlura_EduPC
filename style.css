@@ -261,7 +261,10 @@ footer .redes i:hover{
         width: 700px;
         text-align: center;
     }
-    
+
+    footer{
+        position: unset;
+    }
 }
 
 @media screen and (min-width: 831px) and (max-width: 969px){
@@ -275,6 +278,10 @@ footer .redes i:hover{
         font-size: 80px;
         width: 500px;
         text-align: center;
+    }
+
+    footer{
+        position: unset;
     }
 }
 
@@ -291,6 +298,9 @@ footer .redes i:hover{
         text-align: center;
     }
     
+    footer{
+        position: unset;
+    }
 }
 
 @media screen and (min-width: 577px) and (max-width: 769px){
@@ -318,6 +328,10 @@ footer .redes i:hover{
 
     .botones_guardarborrar{
         flex-direction: row;
+    }
+
+    footer{
+        position: unset;
     }
 }
 
@@ -368,5 +382,9 @@ footer .redes i:hover{
 
     .encriptar, .desencriptar{
         margin-left: 30px;
+    }
+
+    footer{
+        position: unset;
     }
 }
