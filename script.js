@@ -9,7 +9,9 @@ La letra "u" es convertida para "ufat" */
 
 function btnEncriptar() {
     if (verificarEspacios(textArea.value) == true){
-        mensaje.value = "No se detecto texto valido"
+        mensaje.value = "No se detectó texto válido"
+        var duracion = 2500;
+        setTimeout(function() {mensaje.value = ""; textArea.value = ""}, duracion);
     } else {
         const textoEncriptado = encriptar(textArea.value);
         mensaje.value = textoEncriptado;
@@ -70,7 +72,6 @@ function validarCaracteres(texto) {
 
 function verificarEspacios(texto) {
     if (texto.trim() === '') {
-        console.log("Espacio detectado")
         return true;
     }
 }
