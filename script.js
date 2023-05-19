@@ -1,5 +1,7 @@
 const textArea = document.querySelector(".texto_receptor");
 const mensaje = document.querySelector(".texto_encriptado");
+const regex = /[^a-z\s\n]/g;
+const advertencia = document.querySelector(".informacion");
 
 /* La letra "e" es convertida para "enter"
 La letra "i" es convertida para "imes"
@@ -62,13 +64,24 @@ function eliminar() {
     mensaje.value = "";
 }
 
-function validarCaracteres(texto) {
-    let textoLimpio = texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-    
-    textoLimpio = textoLimpio.toLowerCase().replace(/[^a-z\s\n]/g, "");
+textArea.addEventListener('input', 
+    function() {
+        let inputValue = textArea.value;
+        if (regex.test(inputValue)) {
+            //Evita que se pongan Mayusculas y Caracteres Especiales
+            inputValue = inputValue.replace(regex, '');
+            textArea.value = inputValue;
 
-    textArea.value = textoLimpio;
-}
+            // Advertencia MODIFICADOR
+            advertencia.style.backgroundColor = "red";
+            advertencia.style.color = "white";
+            var duracion = 1000;
+            setTimeout(function() {
+                advertencia.style.backgroundColor = "transparent";
+                advertencia.style.color = "#929292";
+                }, duracion);
+        }
+    });
 
 function verificarEspacios(texto) {
     if (texto.trim() === '') {
