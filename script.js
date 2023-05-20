@@ -88,3 +88,12 @@ function verificarEspacios(texto) {
         return true;
     }
 }
+
+function teclaEnter(){
+    let teclaEnter = window.event.keyCode;
+    if (teclaEnter == 13) {
+        btnEncriptar();
+    }
+}
+
+window.addEventListener('keydown', teclaEnter);
